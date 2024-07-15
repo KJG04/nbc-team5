@@ -1,35 +1,29 @@
-# rollup-starter-app
+# 시작하기
 
-This repo contains a bare-bones example of how to create an application using Rollup, including importing a module from `node_modules` and converting it from CommonJS.
-
-*See also https://github.com/rollup/rollup-starter-lib*
-
-
-## Getting started
-
-Clone this repository and install its dependencies:
-
-```bash
-git clone https://github.com/rollup/rollup-starter-app
-cd rollup-starter-app
-npm install
-
-# or
-npx degit "rollup/rollup-starter-app" my-app
-cd my-app
-npm install
+```sh
+npm i
 ```
 
-The `public/index.html` file contains a `<script src='bundle.js'>` tag, which means we need to create `public/bundle.js`. The `rollup.config.js` file tells Rollup how to create this bundle, starting with `src/main.js` and including all its dependencies, including [date-fns](https://date-fns.org).
+위 커맨드를 실행시켜서 의존 패키지를 다운받습니다. (npm 설치 필요)
 
-`npm run build` builds the application to `public/bundle.js`, along with a sourcemap file for debugging.
+# 개발하기
 
-`npm start` launches a server, using [serve](https://github.com/zeit/serve). Navigate to [localhost:3000](http://localhost:3000).
+```sh
+npm run dev
+```
 
-`npm run watch` will continually rebuild the application as your source files change.
+위 커맨드를 실행시키면 개발 모드가 실행됩니다. 코드 수정시 바로 반영됩니다. 터미널에 뜨는 http://localhost:xxxx 에 접속하면 화면을 볼 수 있습니다.
 
-`npm run dev` will run `npm start` and `npm run watch` in parallel.
+# 빌드하기
 
-## License
+```sh
+npm run build
+```
 
-[MIT](LICENSE).
+위 커맨드를 실행시키면 코드를 빌드하게 됩니다. 빌드한 결과는
+
+```sh
+npm run start
+```
+
+위 커맨드를 실행시켜 확인할 수 있습니다.
