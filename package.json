@@ -18,6 +18,7 @@
     "deploy": "gh-pages -d public"
   },
   "dependencies": {
+    "firebase": "^10.12.3",
     "jquery": "^3.7.1"
   },
   "homepage": "https://KJG04.github.io/nbc-team5/"
