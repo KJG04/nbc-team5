@@ -23,7 +23,7 @@ npm run build
 위 커맨드를 실행시키면 코드를 빌드하게 됩니다. 빌드한 결과는
 
 ```sh
-npm run start
+npm run preview
 ```
 
 위 커맨드를 실행시켜 확인할 수 있습니다.
