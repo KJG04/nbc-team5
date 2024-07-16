@@ -13,5 +13,8 @@
     "watch": "rollup -c -w",
     "dev": "npm-run-all --parallel start watch",
     "start": "serve public"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
   }
 }

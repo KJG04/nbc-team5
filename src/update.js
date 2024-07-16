@@ -1,6 +1,6 @@
-var span = document.querySelector('#time-now')
+import $ from 'jquery'
 
 export default function update() {
-  span.textContent = new Date().toISOString()
+  $('span').text(new Date().toISOString())
   setTimeout(update, 1000)
 }
