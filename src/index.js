@@ -86,15 +86,25 @@ const getGuestBook = async () => {
     let guestBook = row['guestBook']
 
     var commnet_html = `            
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h3 class="card-text">${name}</h3>
-                            <p class="card-title">${guestBook}</p>
-                        </div>
-                    </div>`
+<div class="card">
+  <div class="card-header">
+    ${name}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">${name}</h5>
+  </div>
+</div>`
 
     $('.comments').append(commnet_html)
   })
 }
 
 getGuestBook()
+
+$(window).on('scroll', function () {
+  if (window.scrollY > 150) {
+    $('.header-container').css('transform', 'translateY(0%)')
+  } else {
+    $('.header-container').css('transform', 'translateY(-100%)')
+  }
+})
