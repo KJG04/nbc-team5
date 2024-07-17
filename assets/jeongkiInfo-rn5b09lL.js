@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";async function n(e){try{await navigator.clipboard.writeText(e),alert("이메일 복사에 성공했습니다")}catch(t){console.error("Failed to copy: ",t),alert("이메일 복사에 실패했습니다")}}document.addEventListener("DOMContentLoaded",function(){document.querySelector(".fa-envelope-open").addEventListener("click",function(){n("ghdwjdrl56@naver.com")})});
