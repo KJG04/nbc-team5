@@ -8,6 +8,10 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <style>
       .list-group-item {
         border-radius: 5px;
@@ -23,15 +27,78 @@
       .card-title {
         font-size: x-large;
       }
+      .like-Btn {
+        all: unset;
+        border-radius: 1000px;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border: 1px solid var(--red);
+        cursor: pointer;
+        color: var(--red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        margin: auto;
+        & i {
+          width: 50px;
+          height: 50px;
+        }
+        & i::before {
+          transform: translateY(-10px);
+        }
+
+        &:hover {
+          background-color: var(--bs-gray-100);
+          border: 1px solid var(--red);
+          color: var(--red);
+        }
+
+        &:active {
+          background-color: var(--gray);
+          border: 1px solid var(--red);
+          color: var(--red);
+        }
+      }
+
+      h1,
+      h2 {
+        font-weight: 900;
+      }
+
+      .submit {
+        display: block;
+        margin-left: auto;
+      }
+
+      .list-group-item {
+        i {
+          margin-right: 8px;
+        }
+        margin-top: 16px;
+      }
+
+      ul {
+        padding-inline-start: 0px;
+      }
+
+      .ul {
+        list-style-type: disc;
+      }
+      .rule-detail {
+        margin-bottom: 8px;
+        margin-inline-start: 16px;
+      }
     </style>
   </head>
-  <body>
+  <body class="bg-light">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <header class="text-center p-4 bg-light">
+    <header class="text-center p-4">
       <h1>오쪼라고!</h1>
       <p>서로 이끌어주고 지지해주며 나아가는 팀입니다.</p>
     </header>
@@ -75,49 +142,69 @@
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">이름 :</h5>
+              <h5 class="card-title">이름 : 김 진 근</h5>
               <p class="card-text">소개 :</p>
             </div>
-            <a href="#" class="btn btn-primary">자세히보기</a>
+            <a href="/jingeunInfo.html" class="btn btn-primary">자세히보기</a>
           </div>
         </div>
       </div>
     </section>
-
+    <hr />
     <!--"우리 팀만의 특징과 추구하는 궁극적인 목표" 가 들어가면 좋을거같습니다.-->
-
-
     <section class="container my-5">
       <h2>규칙</h2>
       <ul class="list-group">
         <li class="list-group-item list-group-item-success">
+          <i class="bi bi-check-circle-fill"></i>
           Pull Request 생성시 무엇을 어떻게 수정했는지 이해하기 쉽게 설명하기!
         </li>
-        <p>• 코드 작성후 자신이 학습한 내용을 다시 되돌아 볼 수 있어요.</p>
-        <p>• 팀원들이 코드리뷰 할 때 작성된 코드를 쉽게 이해할 수 있어요.</p>
+        <ul class="ul">
+          <li class="rule-detail">
+            코드 작성후 자신이 학습한 내용을 다시 되돌아 볼 수 있어요.
+          </li>
+          <li class="rule-detail">
+            팀원들이 코드리뷰 할 때 작성된 코드를 쉽게 이해할 수 있어요.
+          </li>
+        </ul>
         <li class="list-group-item list-group-item-success">
+          <i class="bi bi-check-circle-fill"></i>
           코드 리뷰 1개 이상 달기!
         </li>
-        <p>• 다른 사람이 쓴 코드를 이해하는 능력을 기를 수 있어요.</p>
+        <ul class="ul">
+          <li class="rule-detail">
+            다른 사람이 쓴 코드를 이해하는 능력을 기를 수 있어요.
+          </li>
+        </ul>
         <li class="list-group-item list-group-item-success">
+          <i class="bi bi-check-circle-fill"></i>
           편하게 질문하고 답하기!
         </li>
-        <p>• 질문하고 답하는 과정에서 깊게 배울 수 있어요.</p>
+        <ul class="ul">
+          <li class="rule-detail">
+            질문하고 답하는 과정에서 깊게 배울 수 있어요.
+          </li>
+        </ul>
         <li class="list-group-item list-group-item-danger">
+          <i class="bi bi-exclamation-triangle-fill"></i>
           말없이 자리 비우지 않기!
         </li>
-        <p>• 질문하고 답하는 과정에서 깊게 배울 수 있어요.</p>
+        <ul class="ul">
+          <li class="rule-detail">
+            질문하고 답하는 과정에서 깊게 배울 수 있어요.
+          </li>
+        </ul>
       </ul>
     </section>
-
+    <hr />
     <div style="text-align: center">
       <p>
         응원하고 싶으시다면
         <br />
         아래 버튼을 눌러주세요!
       </p>
-      <button type="button" class="btn btn-outline-secondary like-Btn">
-        ❤️
+      <button type="button" class="like-Btn">
+        <i class="bi bi-heart-fill"></i>
       </button>
       <p class="like-count">0</p>
     </div>
