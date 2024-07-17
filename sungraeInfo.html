@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://kit.fontawesome.com/98afb18bf2.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
-      * {
-        font-family: 'Nanum Myeongjo', serif;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/98afb18bf2.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
-      .profile {
-        width: 300px;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    * {
+      font-family: 'Nanum Myeongjo', serif;
+      margin: 0;
+      padding: 0;
+    }
 
-      .maininfo {
-        padding-left: 10%;
-        padding-right: 10%;
-      }
+    .profile {
+      width: 340px;
+      height: 340px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .like_list {
-        padding-left: 10%;
-        padding-right: 10%;
-      }
+    .maininfo {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
 
-      .nav {
-        justify-content: center;
-        align-items: center;
-      }
+    .like_list {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
 
-      .aboutme {
-        padding-left: 100px;
-        padding-right: 0px;
-      }
-    </style>
-    <script type="module" crossorigin src="/assets/sungraeInfo-4GFq-Ydv.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
-  </head>
+    .nav {
+      justify-content: center;
+      align-items: center;
+    }
 
-  <body>
-    <!--
+    .aboutme {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/sungraeInfo-4GFq-Ydv.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+</head>
+
+<body>
+  <!--
     - 포함 내용
     1. [팀]과 [자신]에 대한 설명 및 MBTI        *
     2. 객관적으로 살펴본 자신의 장점            *
@@ -65,107 +59,98 @@
     5. 우리 팀의 약속
     6. 팀원들의 블로그 주소-->
 
-    <div class="container-fluid mt-3">
-      <!--header-->
-      <nav
-        class="navbar navbar-expand-lg bg-secondary-tertiary text-uppercase"
-        id="mainNav"
-      >
-        <div class="container">
-          <a class="navbar-brand" href="#">Sungrae-Cho</a>
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"
-                  >About</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-5 mb-5 mb-lg-0 text-lg-end">
-            <a
-              class="btn btn-outline-secondary btn-social mx-1"
-              href="https://github.com/Sungrae-kogi"
-              target="_blank"
-              ><i class="fab fa-github fa-lg"></i
-            ></a>
-            <a
-              class="btn btn-outline-secondary btn-social mx-1"
-              href="whvkek@naver.com"
-              target="_blank"
-              ><i class="fa fa-envelope-open"></i
-            ></a>
-            <a
-              class="btn btn-outline-secondary btn-social mx-1"
-              href=""
-              target="_blank"
-              ><i class="fa fa-home"></i
-            ></a>
-          </div>
+  <div class="container-fluid mt-3">
+    <!--header-->
+    <nav class="navbar navbar-expand-lg bg-secondary-tertiary text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#">Sungrae-Cho</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://purple95.tistory.com/">Tistory</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <!--header-end-->
-      <!--main-->
-      <hr class="featurette-divider" />
-      <div class="maininfo row featurette">
-        <div
-          class="col-md-5 order-md-1 bg-primary-subtle border border-5 rounded-circle profile"
-        >
-          프로필 사진
-        </div>
-        <div class="col-md-7 order-md-2 aboutme">
-          <h2 class="featurette-heading fw-normal lh-1">ABOUT ME</h2>
-          <p class="lead">간단한 자기소개</p>
-          <h2 class="featurette-heading fw-normal lh-1 pt-2">관심사</h2>
-          <p class="lead">간단한 관심사 소개</p>
-          <h2 class="featurette-heading fw-normal lh-1 pt-2">자신의 스타일</h2>
-          <p class="lead">자신의 스타일, 협업 스타일</p>
-          <h2 class="featurette-heading fw-normal lh-1 pt-2">장점</h2>
-          <p class="lead">객관적으로 살펴본 자신의 장점</p>
+        <div class="col-lg-5 text-end">
+          <a class="btn btn-outline-secondary btn-social mx-1" href="https://github.com/Sungrae-kogi" target="_blank"><i
+              class="fab fa-github fa-lg"></i></a>
+          <a class="btn btn-outline-secondary btn-social mx-1" href="mailto:m.bluth@example.com" target="_blank"><i
+              class="fa fa-envelope-open"></i></a>
+          <a class="btn btn-outline-secondary btn-social mx-1" href="/index.html" target="_self"><i
+              class="fa fa-home"></i></a>
         </div>
       </div>
-
-      <hr class="featurette-divider divider" />
-
-      <div class="like_list row">
-        <div class="col-sm-4 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
-              <img src="..." class="card-img-top" alt="사진" />
-              <h5 class="card-title">좋아하는것</h5>
-              <p class="card-text">좋아하는것에 대한 간략한 이유?</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img src="..." class="card-img-top" alt="사진" />
-              <h5 class="card-title">좋아하는것</h5>
-              <p class="card-text">좋아하는것에 대한 간략한 이유?</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img src="..." class="card-img-top" alt="사진" />
-              <h5 class="card-title">좋아하는것</h5>
-              <p class="card-text">좋아하는것에 대한 간략한 이유?</p>
-            </div>
-          </div>
-        </div>
+    </nav>
+    <!--header-end-->
+    <!--main-->
+    <hr class="featurette-divider" />
+    <div class="maininfo row featurette">
+      <div class="col-md-5 d-flex justify-content-center">
+      <img src="/assets/sungrae-Cvtogxlp.jpg" class="img-fluid order-md-1 p-0 bg-primary-subtle border border-5 rounded-circle profile" alt="...">
       </div>
-      <!--main end-->
-      <!--footer-->
-
-      <!--footer end-->
+      <div class="col-md-7 order-md-2 aboutme">
+        <h2 class="featurette-heading fw-normal lh-1">ABOUT ME</h2>
+        <p class="lead">코딩 못하는 전공자.</p>
+        <h2 class="featurette-heading fw-normal lh-1 pt-2">관심사</h2>
+        <p class="lead">헬스, 모바일 게임, 주식</p>
+        <h2 class="featurette-heading fw-normal lh-1 pt-2">나만의 스타일</h2>
+        <p class="lead">숏코딩 보다는 롱코딩, 하드코딩 보다는 소프트코딩</p>
+        <h2 class="featurette-heading fw-normal lh-1 pt-2">장점</h2>
+        <p class="lead">주도적이지는 않지만 맡은 바에 대해서는 책임감을 갖고 최선을 다합니다.</p>
+      </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <hr class="featurette-divider divider" />
+    <div class="h2 text-center my-5">좋아하는것?</div>
+    <div class="like_list row">
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body text-center">
+            <img src="/assets/health-DpF2LFjS.png" class="card-img-top" alt="사진" />
+            <h5 class="card-title">운동</h5>
+            <p class="card-text">구기종목 보다는 런닝, 헬스</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <img src="data:image/png;base64,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" class="card-img-top" alt="사진" />
+            <h5 class="card-title">모바일 게임</h5>
+            <p class="card-text">원신 UID??</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <img src="/assets/cat-D84RHTKP.png" class="card-img-top" alt="사진" />
+            <h5 class="card-title">고양이</h5>
+            <p class="card-text">귀엽습니다, 사악한 이빨, 매끄러운 요 각선미.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--main end-->
+    <!--footer-->
+    <footer>
+      <div class="copyright py-4 text-center text-black">
+        <div class="container">
+          <small>
+            Copyright &copy; Sungrae-Cho
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </small>
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
