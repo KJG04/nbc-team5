@@ -112,6 +112,18 @@
         z-index: 1000;
         transform: translateY(-100%);
         transition: transform 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & i {
+          font-size: 24px;
+          color: black;
+        }
+
+        & .github {
+          margin-right: 32px;
+        }
       }
 
       .header {
@@ -148,6 +160,11 @@
 
       .header-container hr {
         margin: 0;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        width: 100%;
+        height: 1px;
       }
     </style>
   </head>
@@ -172,6 +189,9 @@
           </li>
         </ul>
       </div>
+      <a href="https://github.com/KJG04/nbc-team5" class="github">
+        <i class="bi bi-github"></i>
+      </a>
       <hr />
     </header>
     <div class="text-center p-4 mt-lg-5">

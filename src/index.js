@@ -91,7 +91,7 @@ const getGuestBook = async () => {
     ${name}
   </div>
   <div class="card-body">
-    <h5 class="card-title">${name}</h5>
+    <h5 class="card-title">${guestBook}</h5>
   </div>
 </div>`
 
