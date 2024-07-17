@@ -1,263 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>오쪼라고!</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <script src="https://kit.fontawesome.com/98afb18bf2.js" crossorigin="anonymous"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-
-
-    * {
-      font-family: "Jua", sans-serif;
-
-    }
-
-
-    .list-group-item {
-      border-radius: 5px;
-    }
-
-
-    .btn-outline-secondary {
-      margin: auto;
-      border-radius: 50%;
-      font-size: 50px;
-    }
-
-
-    .card-text {
-      font-size: small;
-    }
-
-
-    .card-title {
-      font-size: x-large;
-    }
-
-
-    .like-Btn {
-      all: unset;
-      border-radius: 1000px;
-      width: 100px;
-      height: 100px;
-      background-color: white;
-      border: 1px solid var(--red);
-      cursor: pointer;
-      color: var(--red);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 50px;
-      margin: auto;
-
-      & i {
-        width: 50px;
-        height: 50px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오쪼라고!</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/98afb18bf2.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+      h1 {
+        margin-top: 72px;
       }
-
-      & i::before {
-        transform: translateY(-10px);
+      * {
+        font-family: 'Jua', sans-serif;
       }
-
-      &:hover {
-        background-color: var(--bs-gray-100);
+      .list-group-item {
+        border-radius: 5px;
+      }
+      .btn-outline-secondary {
+        margin: auto;
+        border-radius: 50%;
+        font-size: 50px;
+      }
+      .card-text {
+        font-size: small;
+      }
+      .card-title {
+        font-size: x-large;
+      }
+      .like-Btn {
+        all: unset;
+        border-radius: 1000px;
+        width: 100px;
+        height: 100px;
+        background-color: white;
         border: 1px solid var(--red);
+        cursor: pointer;
         color: var(--red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        margin: auto;
+
+        & i {
+          width: 50px;
+          height: 50px;
+        }
+
+        & i::before {
+          transform: translateY(-10px);
+        }
+
+        &:hover {
+          background-color: var(--bs-gray-100);
+          border: 1px solid var(--red);
+          color: var(--red);
+        }
+
+        &:active {
+          background-color: var(--gray);
+          border: 1px solid var(--red);
+          color: var(--red);
+        }
       }
-
-      &:active {
-        background-color: var(--gray);
-        border: 1px solid var(--red);
-        color: var(--red);
+      h1,
+      h2 {
+        font-weight: 900;
       }
-    }
-
-
-    h1,
-    h2 {
-      font-weight: 900;
-    }
-
-
-    .submit {
-      display: block;
-      margin-left: auto;
-    }
-
-
-    .list-group-item {
-      i {
-        margin-right: 8px;
+      .submit {
+        display: block;
+        margin-left: auto;
       }
+      .list-group-item {
+        i {
+          margin-right: 8px;
+        }
 
-      margin-top: 16px;
-    }
+        margin-top: 16px;
+      }
+      ul {
+        padding-inline-start: 0px;
+      }
+      .ul {
+        list-style-type: disc;
+      }
+      .rule-detail {
+        margin-bottom: 8px;
+        margin-inline-start: 16px;
+      }
+      .card-img-top {
+        object-fit: cover;
+      }
+      .header-container {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
+        & i {
+          font-size: 24px;
+          color: black;
+        }
 
-    ul {
-      padding-inline-start: 0px;
-    }
+        & .github {
+          margin-right: 32px;
+        }
+      }
+      .header {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .header-title {
+        font-weight: bold;
+        font-size: 32px;
+        margin-right: 32px;
+      }
+      .header ul {
+        display: flex;
+        list-style-type: none;
+        gap: 16px;
+        margin: 0;
+      }
+      .header ul li {
+        text-decoration: underline;
+        color: black;
 
+        & a {
+          color: black;
 
-    .ul {
-      list-style-type: disc;
-    }
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+      ul {
+        padding-inline-start: 0;
+      }
+      .ul {
+        margin-top: 8px;
+      }
+      .header-container hr {
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+      }
+      .header-title a {
+        text-decoration: none;
+        color: black;
+      }
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .card-header > i {
+        font-size: 20px;
+        margin-left: 10px; /* 필요시 조정 */
+      }
+      .passwordModal {
+        position: fixed;
+        display: none;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        align-items: center;
+        z-index: 2000;
+      }
+      .modal_body {
+        width: 400px;
+        height: 200px;
+        padding: 40px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+      }
+      .comments {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
+    <script type="module" crossorigin src="/nbc-team5/assets/index-3WUH_jrj.js"></script>
+    <link rel="modulepreload" crossorigin href="/nbc-team5/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  </head>
 
-
-    .rule-detail {
-      margin-bottom: 8px;
-      margin-inline-start: 16px;
-    }
-  </style>
-  <script type="module" crossorigin src="/nbc-team5/assets/index-BZklzCYX.js"></script>
-  <link rel="modulepreload" crossorigin href="/nbc-team5/assets/modulepreload-polyfill-B5Qt9EMX.js">
-  <link rel="modulepreload" crossorigin href="/nbc-team5/assets/jquery-Da2SryCc.js">
-</head>
-
-<body class="bg-light">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <header class="text-center p-4">
-    <h1>오쪼라고!</h1>
-    <!--팀의 특징과, 추구하는 궁극적인 목표-->
-
-    <div class="d-flex flex-column">
-      <div>
-        <a class="btn btn-white border border-3" data-bs-toggle="collapse" href="#collapseExample" role="button"
-          aria-expanded="false" aria-controls="collapseExample">ABOUT US</a>
-        <div class="collapse pt-2" id="collapseExample">
-          <div class="card card-body">
-            <div class="h4 my-2">Team. 오쪼라고!</div>
-            <div class="my-2">내일배움캠프 Spring 6기를 발판으로 백엔드 개발자로서의 커리어를 시작하고자<br>서로 이끌어주고 지지해주며 끝까지 나아가고자 모였습니다.</div>
-            <div class="h4 my-2"><i class="fa-solid fa-fire fa-lg"></i> 우리들의 목표</div>
-            <div class="my-2">포기하지 않고 캠프 끝까지 완주하기.<br>협업 과정에 대한 올바른 경험을 하고 이후의 팀프로젝트에서 활용하기.<br>웹 개발 전반에 대한 이해를 바탕으로
-              Java&Spring을 무기로 한 백엔드 개발자가 되기.</div>
-            <div class="h4 my-2"><i class="fa-solid fa-gift fa-lg"></i> 프로젝트 소개</div>
-            <div class="my-2">사전 캠프 및 온보딩 학습을 이용한 팀 및 자기소개 페이지를 제작합니다.<br>팀원을 클릭하여 각 팀원에 대한 정보를 볼 수 있고, 응원의 버튼 한번씩
-              눌러주세요.<br>방명록 작성은 저희 팀에게 큰 힘이 됩니다.</div>
-
-
+  <body class="bg-light">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <header class="bg-light header-container">
+      <div class="header">
+        <div class="header-title">
+          <a href="../">오쪼라고!</a>
+        </div>
+        <ul>
+          <li>
+            <a href="./sungraeInfo.html">조성래</a>
+          </li>
+          <li>
+            <a href="./jeongkiInfo.html">홍정기</a>
+          </li>
+          <li>
+            <a href="./jingeunInfo.html">김진근</a>
+          </li>
+        </ul>
+      </div>
+      <a href="https://github.com/KJG04/nbc-team5" class="github">
+        <i class="bi bi-github"></i>
+      </a>
+      <hr />
+    </header>
+    <div class="text-center p-4">
+      <h1>오쪼라고!</h1>
+      <div class="d-flex flex-column">
+        <div>
+          <a
+            class="btn btn-white border border-3"
+            data-bs-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+            >ABOUT US</a
+          >
+          <div class="collapse pt-2" id="collapseExample">
+            <div class="card card-body">
+              <div class="h4 my-2">Team. 오쪼라고!</div>
+              <div class="my-2">
+                내일배움캠프 Spring 6기를 발판으로 백엔드 개발자로서의 커리어를
+                시작하고자<br />서로 이끌어주고 지지해주며 끝까지 나아가고자
+                모였습니다.
+              </div>
+              <div class="h4 my-2">
+                <i class="fa-solid fa-fire fa-lg"></i> 우리들의 목표
+              </div>
+              <div class="my-2">
+                포기하지 않고 캠프 끝까지 완주하기.<br />협업 과정에 대한 올바른
+                경험을 하고 이후의 팀프로젝트에서 활용하기.<br />웹 개발 전반에
+                대한 이해를 바탕으로 Java&Spring을 무기로 한 백엔드 개발자가
+                되기.
+              </div>
+              <div class="h4 my-2">
+                <i class="fa-solid fa-gift fa-lg"></i> 프로젝트 소개
+              </div>
+              <div class="my-2">
+                사전 캠프 및 온보딩 학습을 이용한 팀 및 자기소개 페이지를
+                제작합니다.<br />팀원을 클릭하여 각 팀원에 대한 정보를 볼 수
+                있고, 응원의 버튼 한번씩 눌러주세요.<br />방명록 작성은 저희
+                팀에게 큰 힘이 됩니다.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-
-  </header>
-
-  <section class="container my-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="/nbc-team5/img/sungrae/sungrae.jpg" class="card-img-top" alt="..." />
-          <div class="card-body text-center">
-            <h5 class="card-title">이름 : 조 성 래</h5>
-            <h6>MBTI : ISFP</h6>
-            <p class="card-text">
-              Java 백엔드 개발자를 지망하는 조성래입니다.<br />처음부터
-              시작한다는 마음으로 임하고있습니다<br />다같이 완주할때까지 화이팅!
-            </p>
+    <section class="container my-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="/nbc-team5/img/sungrae/sungrae.jpg" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">조성래</h5>
+              <h6>ISFP</h6>
+              <p class="card-text">
+                Java 백엔드 개발자를 지망하는 조성래입니다.<br />처음부터
+                시작한다는 마음으로 임하고있습니다<br />다같이 완주할때까지
+                화이팅!
+              </p>
+            </div>
+            <a href="./sungraeInfo.html" class="btn btn-primary" target="_self"
+              >자세히보기</a
+            >
           </div>
-          <a href="./sungraeInfo.html" class="btn btn-primary" target="_self">자세히보기</a>
         </div>
         <div class="col">
           <div class="card h-100">
-            <img
-              src="/nbc-team5/img/jeongki/jeongki.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body text-center">
-              <h5 class="card-title">이름 : 홍 정 기</h5>
-              <h6>MBTI : INFJ</h6>
+            <img src="/nbc-team5/img/jeongki/jeongki.jpg" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">홍정기</h5>
+              <h6>INFJ</h6>
               <p class="card-text">
                 늦게 출발한 만큼 빨리 뛰어가겠습니다.<br />
                 JAVA6기 모든분들이 취업하기를 기원합니다.
               </p>
             </div>
-            <a href="./jeongkiInfo.html" class="btn btn-primary" target="_self">자세히보기</a>
+            <a href="./jeongkiInfo.html" class="btn btn-primary" target="_self"
+              >자세히보기</a
+            >
           </div>
-          <a href="#" class="btn btn-primary">자세히보기</a>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/nbc-team5/img/jingeun/jingeun.png"
+              class="card-img-top"
+              height="464px"
+            />
+            <div class="card-body">
+              <h5 class="card-title">김진근</h5>
+              <h6>INTP</h6>
+              <p class="card-text">
+                Spring 고수가 되고 싶은 김진근입니다.
+                <br />
+                서로 도와주며, 취업까지 달려봅시다!!
+              </p>
+            </div>
+            <a href="./jingeunInfo.html" class="btn btn-primary">자세히보기</a>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://images.unsplash.com/photo-1446768500601-ac47e5ec3719?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1446&q=80"
-            class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">이름 : 김 진 근</h5>
-            <p class="card-text">소개 :</p>
-          </div>
-          <a href="/jingeunInfo.html" class="btn btn-primary">자세히보기</a>
-        </div>
-      </div>
+    </section>
+    <hr />
+    <!--"우리 팀만의 특징과 추구하는 궁극적인 목표" 가 들어가면 좋을거같습니다.-->
+    <section class="container my-5">
+      <h2>규칙</h2>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success">
+          <i class="bi bi-check-circle-fill"></i>
+          Pull Request 생성시 무엇을 어떻게 수정했는지 이해하기 쉽게 설명하기!
+        </li>
+        <ul class="ul">
+          <li class="rule-detail">
+            코드 작성후 자신이 학습한 내용을 다시 되돌아 볼 수 있어요.
+          </li>
+          <li class="rule-detail">
+            팀원들이 코드리뷰 할 때 작성된 코드를 쉽게 이해할 수 있어요.
+          </li>
+        </ul>
+        <li class="list-group-item list-group-item-success">
+          <i class="bi bi-check-circle-fill"></i>
+          코드 리뷰 1개 이상 달기!
+        </li>
+        <ul class="ul">
+          <li class="rule-detail">
+            다른 사람이 쓴 코드를 이해하는 능력을 기를 수 있어요.
+          </li>
+        </ul>
+        <li class="list-group-item list-group-item-success">
+          <i class="bi bi-check-circle-fill"></i>
+          편하게 질문하고 답하기!
+        </li>
+        <ul class="ul">
+          <li class="rule-detail">
+            질문하고 답하는 과정에서 깊게 배울 수 있어요.
+          </li>
+        </ul>
+        <li class="list-group-item list-group-item-danger">
+          <i class="bi bi-exclamation-triangle-fill"></i>
+          말없이 자리 비우지 않기!
+        </li>
+      </ul>
+    </section>
+    <hr />
+    <div style="text-align: center">
+      <p>
+        응원하고 싶으시다면
+        <br />
+        아래 버튼을 눌러주세요!
+      </p>
+      <button type="button" class="like-Btn">
+        <i class="bi bi-heart-fill"></i>
+      </button>
+      <p class="like-count">0</p>
     </div>
-  </section>
-  <hr />
-  <!--"우리 팀만의 특징과 추구하는 궁극적인 목표" 가 들어가면 좋을거같습니다.-->
-  <section class="container my-5">
-    <h2>규칙</h2>
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-success">
-        <i class="bi bi-check-circle-fill"></i>
-        Pull Request 생성시 무엇을 어떻게 수정했는지 이해하기 쉽게 설명하기!
-      </li>
-      <ul class="ul">
-        <li class="rule-detail">
-          코드 작성후 자신이 학습한 내용을 다시 되돌아 볼 수 있어요.
-        </li>
-        <li class="rule-detail">
-          팀원들이 코드리뷰 할 때 작성된 코드를 쉽게 이해할 수 있어요.
-        </li>
-      </ul>
-      <li class="list-group-item list-group-item-success">
-        <i class="bi bi-check-circle-fill"></i>
-        코드 리뷰 1개 이상 달기!
-      </li>
-      <ul class="ul">
-        <li class="rule-detail">
-          다른 사람이 쓴 코드를 이해하는 능력을 기를 수 있어요.
-        </li>
-      </ul>
-      <li class="list-group-item list-group-item-success">
-        <i class="bi bi-check-circle-fill"></i>
-        편하게 질문하고 답하기!
-      </li>
-      <ul class="ul">
-        <li class="rule-detail">
-          질문하고 답하는 과정에서 깊게 배울 수 있어요.
-        </li>
-      </ul>
-      <li class="list-group-item list-group-item-danger">
-        <i class="bi bi-exclamation-triangle-fill"></i>
-        말없이 자리 비우지 않기!
-      </li>
-      <ul class="ul">
-        <li class="rule-detail">
-          질문하고 답하는 과정에서 깊게 배울 수 있어요.
-        </li>
-      </ul>
-    </ul>
-  </section>
-  <hr />
-  <div style="text-align: center">
-    <p>
-      응원하고 싶으시다면
-      <br />
-      아래 버튼을 눌러주세요!
-    </p>
-    <button type="button" class="like-Btn">
-      <i class="bi bi-heart-fill"></i>
-    </button>
-    <p class="like-count">0</p>
-  </div>
     <section class="container my-5">
       <h2>방명록</h2>
       <form class="mb-4">
@@ -272,8 +405,10 @@
             autocomplete
             class="form-control guestBook"
             placeholder="방명록을 남겨주세요..."
-          ></textarea><br />
-          <input type="text"
+          ></textarea
+          ><br />
+          <input
+            type="text"
             autocomplete
             class="form-control password"
             placeholder="암호를 입력해주세요..."
@@ -288,10 +423,15 @@
     <form>
       <div class="passwordModal">
         <div class="modal_body">
-            <h3>비밀번호를 입력해주세요</h3>
-            <input type="password" class="pw" autocomplete placeholder="비밀번호를 입력해주세요..."><br><br>
-            <button type="button" class="pwCheck btn btn-primary">확인</button>
-            <button type="button" class="pwNo btn btn-danger">취소</button>
+          <h3>비밀번호를 입력해주세요</h3>
+          <input
+            type="password"
+            class="pw"
+            autocomplete
+            placeholder="비밀번호를 입력해주세요..."
+          /><br /><br />
+          <button type="button" class="pwCheck btn btn-primary">확인</button>
+          <button type="button" class="pwNo btn btn-danger">취소</button>
         </div>
       </div>
     </form>

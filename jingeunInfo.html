@@ -8,9 +8,145 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/nbc-team5/assets/jingeunInfo-DkrsisPW.js"></script>
-    <link rel="modulepreload" crossorigin href="/nbc-team5/assets/modulepreload-polyfill-B5Qt9EMX.js">
-    <link rel="modulepreload" crossorigin href="/nbc-team5/assets/jquery-Da2SryCc.js">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+      * {
+        font-family: 'Jua', sans-serif;
+      }
+      body {
+        background-color: #f8f9fa;
+      }
+      .hero {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 16px;
+      }
+      .top {
+        display: flex;
+        gap: 32px;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0px 32px;
+        margin-top: 72px;
+      }
+      .side-text-container {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+      }
+      .header-container {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & i {
+          font-size: 24px;
+          color: black;
+        }
+
+        & .github {
+          margin-right: 32px;
+        }
+      }
+      .header {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .header-title {
+        font-weight: bold;
+        font-size: 32px;
+        margin-right: 32px;
+      }
+      .header ul {
+        display: flex;
+        list-style-type: none;
+        gap: 16px;
+        margin: 0;
+      }
+      .header ul li {
+        text-decoration: underline;
+        color: black;
+
+        & a {
+          color: black;
+
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+      ul {
+        padding-inline-start: 0;
+      }
+      .header-container hr {
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        width: 100%;
+        height: 1px;
+      }
+      .header-title a {
+        text-decoration: none;
+        color: black;
+      }
+      h1 {
+        font-weight: bold;
+      }
+      .desc {
+        font-size: 20px;
+      }
+      .list {
+        list-style-type: disc;
+        font-size: 20px;
+        list-style-position: inside;
+      }
+      .link-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & a {
+          color: black;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+
+        & i {
+          font-size: 24px;
+        }
+      }
+      .fav-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0px 17px;
+        margin-top: 32px;
+        margin-bottom: 72px;
+      }
+      h2 {
+        margin-top: 72px;
+        margin-left: 32px;
+      }
+      .card img {
+        object-fit: cover;
+        object-position: center;
+      }
+      .card {
+        border-radius: 16px;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <script
@@ -18,6 +154,85 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <div></div>
+    <header class="bg-light header-container">
+      <div class="header">
+        <div class="header-title">
+          <a href="../">오쪼라고!</a>
+        </div>
+        <ul>
+          <li>
+            <a href="./sungraeInfo.html">조성래</a>
+          </li>
+          <li>
+            <a href="./jeongkiInfo.html">홍정기</a>
+          </li>
+          <li>
+            <a href="./jingeunInfo.html">김진근</a>
+          </li>
+        </ul>
+      </div>
+      <a href="https://github.com/KJG04/nbc-team5" class="github">
+        <i class="bi bi-github"></i>
+      </a>
+      <hr />
+    </header>
+
+    <div class="top">
+      <img
+        src="/nbc-team5/img/jingeun/jingeun.png"
+        width="500"
+        height="400"
+        class="hero"
+      />
+      <div class="side-text-container">
+        <h1>김진근</h1>
+        <div class="desc">
+          '어제의 나보다 성장한 오늘의 나'가 되기위해 노력합니다. 뛰어난 사람이
+          되기 위해 끊임없이 공부합니다.
+        </div>
+        <ul class="list">
+          <li class="item">읽기 쉬운 코드를 작성하려고 노력합니다.</li>
+          <li class="item">마주한 문제를 피하지 않고 해결합니다.</li>
+          <li class="item">새로운 문제를 해결하는 것을 즐깁니다.</li>
+        </ul>
+        <div class="link-container">
+          <a href="https://github.com/KJG04">
+            <i class="bi bi-github"></i>
+            Github
+          </a>
+          <a href="https://devlog-kjg04.vercel.app/">
+            <i class="bi bi-code-square"></i>
+            개발 블로그
+          </a>
+        </div>
+      </div>
+    </div>
+    <h2>좋아하는 것</h2>
+    <div class="row fav-container">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <img
+            src="https://static.wanted.co.kr/images/events/1596/146d5acc.jpg"
+            class="card-img-top"
+            height="350"
+          />
+          <div class="card-body">
+            <p class="card-text">개발 공부!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <img
+            src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGxpE0%2FbtsHzDOzask%2FGKpXjBuqca4zKiaunIG1wK%2Fimg.jpg"
+            class="card-img-top"
+            height="350"
+          />
+          <div class="card-body">
+            <p class="card-text">뒹굴거리기!</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
