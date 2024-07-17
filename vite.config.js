@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, 'src/index.html'),
         sungraeInfo: resolve(__dirname, 'src/sungraeInfo.html'),
+        jeongkiInfo: resolve(__dirname, 'src/jeongkiInfo.html'),
       },
     },
   },
