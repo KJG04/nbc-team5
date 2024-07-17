@@ -152,15 +152,22 @@
           </div>
           <a href="./sungraeInfo.html" class="btn btn-primary" target="_self">자세히보기</a>
         </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://images.unsplash.com/photo-1446768500601-ac47e5ec3719?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1446&q=80"
-            class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">이름 :</h5>
-            <p class="card-text">소개 :</p>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/img/jeongki/jeongki.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">이름 : 홍 정 기</h5>
+              <h6>MBTI : INFJ</h6>
+              <p class="card-text">
+                늦게 출발한 만큼 빨리 뛰어가겠습니다.<br />
+                JAVA6기 모든분들이 취업하기를 기원합니다.
+              </p>
+            </div>
+            <a href="./jeongkiInfo.html" class="btn btn-primary" target="_self">자세히보기</a>
           </div>
           <a href="#" class="btn btn-primary">자세히보기</a>
         </div>
@@ -237,19 +244,43 @@
     </button>
     <p class="like-count">0</p>
   </div>
+    <section class="container my-5">
+      <h2>방명록</h2>
+      <form class="mb-4">
+        <div class="form-group">
+          <input
+            autocomplete
+            type="text"
+            class="form-control name"
+            placeholder="이름을 입력해주세요..."
+          /><br />
+          <textarea
+            autocomplete
+            class="form-control guestBook"
+            placeholder="방명록을 남겨주세요..."
+          ></textarea><br />
+          <input type="text"
+            autocomplete
+            class="form-control password"
+            placeholder="암호를 입력해주세요..."
+          />
+        </div>
+        <button type="button" class="btn btn-primary submit">작성하기</button>
+      </form>
+      <div class="comments"></div>
+    </section>
+    <script src="index.js" type="module"></script>
 
-  <section class="container my-5">
-    <h2>방명록</h2>
-    <form class="mb-4">
-      <div class="form-group">
-        <input type="text" class="form-control name" placeholder="이름을 입력해주세요..." /><br />
-        <textarea class="form-control guestBook" placeholder="방명록을 남겨주세요..."></textarea>
+    <!-- 방명록 삭제를 위한 Modal -->
+    <form>
+      <div class="passwordModal">
+        <div class="modal_body">
+            <h3>비밀번호를 입력해주세요</h3>
+            <input type="password" class="pw" autocomplete placeholder="비밀번호를 입력해주세요..."><br><br>
+            <button type="button" class="pwCheck btn btn-primary">확인</button>
+            <button type="button" class="pwNo btn btn-danger">취소</button>
+        </div>
       </div>
-      <button type="button" class="btn btn-primary submit">작성하기</button>
     </form>
-    <div class="comments"></div>
-  </section>
-  <script src="index.js" type="module"></script>
-</body>
-
+  </body>
 </html>
