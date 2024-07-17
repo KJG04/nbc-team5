@@ -153,3 +153,10 @@ $(document).on('click', '.delete-btn', function() {
 // 처음에 guestBook 데이터 가져오기
 getGuestBook();
 
+$(window).on('scroll', function () {
+  if (window.scrollY > 150) {
+    $('.header-container').css('transform', 'translateY(0%)')
+  } else {
+    $('.header-container').css('transform', 'translateY(-100%)')
+  }
+})
