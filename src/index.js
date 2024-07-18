@@ -91,15 +91,15 @@ const getGuestBook = async () => {
     let guestBook = row['guestBook']
 
     var comment_html = `
-<div class="card" id="${id}">
-  <div class="card-header">
-    ${name} <i class="bi bi-trash3 delete-btn" id="${id}"></i>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">${guestBook}</h5>
-    <input type="hidden" id="${password}"/>
-  </div>
-</div>`
+                      <div class="card" id="${id}">
+                        <div class="card-header">
+                          ${name} <i class="bi bi-trash3 delete-btn" id="${id}"></i>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">${guestBook}</h5>
+                          <input type="hidden" id="${password}"/>
+                        </div>
+                      </div>`
 
     $('.comments').append(comment_html)
   })
@@ -111,7 +111,8 @@ $(document).on('click', '.delete-btn', function () {
   let id = $(this).attr('id')
 
   // 부모태그의 형제중 input에 id값을 가져옴(DB에 저장된 비밀번호 저장)
-  var password = $(this).parent().siblings('input').attr('id')
+  var password =  $(this).closest('.card').find('input[type="hidden"]').attr('id');
+  console.log(password)
 
   // 가려져 있던 모달 보여주기
   $('.passwordModal').css('display', 'flex')
@@ -120,6 +121,8 @@ $(document).on('click', '.delete-btn', function () {
   $('.pwCheck').on('click', async function () {
     // 입력한 비밀번호 저장
     let pw = $('.pw').val()
+    console.log(pw);
+    console.log(password);
 
     //DB에 저장된 비밀번호와 클라이언트가 입력한 비밀번호 비교
     if (pw === password) {
