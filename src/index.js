@@ -73,7 +73,7 @@ $('.submit').click(async function () {
     }
     await addDoc(collection(db, 'guestBook'), docData)
     alert('작성 되었습니다.!')
-    window.location.reload()
+    window.location.reload(true);
   } else {
     alert('빈칸을 작성해주세요^^')
   }
